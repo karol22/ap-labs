@@ -7,6 +7,10 @@ int main(){
     string s="pwwkew";
     cout<<"Enter your string: ";
     cin>>s;
+    if(s.length()==0){
+      cout<<"The answer is 0";
+      return 0;
+    }
     map<char, int> m; //position of last seen of character char
     int answer=0;
     int current=0;
