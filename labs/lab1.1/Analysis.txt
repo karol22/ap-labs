@@ -1,0 +1,29 @@
+ANALISIS OF PERFORMANCE
+
+We test the performance  using the file `testa.txt` that is attached to this text.
+
+These are the results
+
+Commands:
+
+    > gcc -o cat2 cat2.c
+    >time ./cat testa.txt
+
+RESULTS:
+real    0m9.665s
+user    0m0.068s
+sys     0m0.378s
+
+Commands:
+
+    > gcc -o cat cat.c
+    >time ./cat testa.txt
+
+RESULTS:
+real    0m10.277s
+user    0m0.066s
+sys     0m0.405s
+
+CONCLUSSION:
+
+The original implementation has a better performance.
