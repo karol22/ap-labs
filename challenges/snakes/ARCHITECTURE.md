@@ -21,5 +21,6 @@ Controller handles the user request. Typically, user interact with View, which i
 
 OpenMP
 -------------------------------
-- Multithreaded core backend 
+Multithreaded core backend. 
+
 We used OpenMP for the multithresded core backend, OpenMP is an application programming interface (API) that supports multi-platform shared memory multiprocessing programming in C, C++, and Fortran, on most platforms, instruction set architectures and operating systems, including Solaris, AIX, HP-UX, Linux, macOS, and Windows. It consists of a set of compiler directives, library routines, and environment variables that influence run-time behavior.
