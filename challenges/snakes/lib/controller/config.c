@@ -1,5 +1,5 @@
-#define VERTICAL 15
-#define HORIZONTAL 50
+#define NROWS 40
+#define NCOLS 160
 #define DOWN 115
 #define UP 119
 #define LEFT 97
