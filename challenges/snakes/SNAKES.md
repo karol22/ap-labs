@@ -3,6 +3,7 @@ SNAKES
 Implementation of a multithreaded version of the video game [Snake](https://en.wikipedia.org/wiki/Snake_(video_game_genre)). 
 This version is a Computer vs Human game. Each enemy is independent and the number of enemies is configurable, fruits as well.
 
+
 Requirements
 --------------------
 - OpenMP installed

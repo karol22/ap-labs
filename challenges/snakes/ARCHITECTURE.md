@@ -9,6 +9,7 @@ May, 2019
 
 Professor Obed Nehemías Muñóz
 
+
 Introduction
 ----------------------
 Our implementation of a multithreaded version of the video game [Snake](https://en.wikipedia.org/wiki/Snake_(video_game_genre)). This version is a Computer vs Human game. Each enemy is independent and the number of enemies is configurable.
@@ -23,7 +24,7 @@ We decided this type of architecture for the following reasons:
 
 Our solution was developed in C as programming language; our MVC abstraction is made up by three parts and can be graphically represented as follows:
 
-![mvc](mvc.png)
+![mvc](mvcsnakes.png)
 
 Model 
 ----------------------
