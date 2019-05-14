@@ -1,12 +1,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <termios.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
 #include <ncurses.h>
+#include <time.h>
 
 int num_enemies;
 int num_fruits;
+int i;
+char **state;
 
 #include "lib/controller/config.c"
 #include "lib/controller/print_to_console.c"
@@ -22,29 +26,36 @@ int num_fruits;
 
 int main(){
     print_instructions();
-      
       int snake_speed=100000;
       int score=0;
-
+      state = malloc(NROWS*sizeof(char*));
+      for(i=0; i<NCOLS; i++){
+             state[i]=malloc(NCOLS*sizeof(char));
+      }
       snake a_snake;
       snake_pos pos1;
-      food food1;
+      food *foods=malloc(num_fruits*sizeof(food));
       snake_init(&a_snake);
       pos_init(&pos1);
-      food_init(&food1);
+      for(i=0; i<num_fruits; i++){
+             food_init(&foods[i]);
+             state[foods[i].X][foods[i].Y]='F';
+      }
 
       system("clear");
       system("stty -echo");             
       snake_place(&a_snake,&pos1);
       set_borders();
-      food_print(&food1);
+      for(i=0; i<num_fruits; i++){
+             food_print(&foods[i]);
+      }
 
       system ("/bin/stty raw");
 
       while(!(game_over(&a_snake,&pos1))){
           while (!kbhit()){
                  usleep(snake_speed);
-                 snake_move(&a_snake,&pos1,&food1,&score);
+                 snake_move(&a_snake,&pos1,&score);
                  if (game_over(&a_snake,&pos1)) break;
           }
           a_snake.prev_direction=a_snake.direction;

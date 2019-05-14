@@ -6,8 +6,8 @@ typedef struct food{
 }food;
 
 void food_init(food *food1){
-    food1->X=(rand()%(NCOLS-5))+1;
-    food1->Y=(rand()%(NROWS-5))+1;
+    food1->X=(rand()%(NCOLS-3))+1;
+    food1->Y=(rand()%(NROWS-3))+1;
     food1->symbol='F';
 }
 

@@ -12,18 +12,16 @@ void snake_place(snake *a_snake, snake_pos *pos1)
 
 }
 
-void snake_move(snake *a_snake, snake_pos *pos1, food *food1, int *score){
-    move_head(a_snake,pos1);
+void snake_move(snake *a_snake, snake_pos *pos1, int *score){
 
-    if (!((a_snake->head_X==food1->X) && (a_snake->head_Y==food1->Y))){
-        move_tail(a_snake,pos1);
-    }else{
-        a_snake->size++;
-        *score=*score+1;
-        food1->X=rand()%(NCOLS-5);
-        food1->Y=rand()%(NROWS-5);
-        food_print(food1);
-    }
+        move_head(a_snake,pos1);
+        if (!(state[(a_snake->head_X)][(a_snake->head_Y)]=='F')){
+            move_tail(a_snake,pos1);
+        } else {
+            a_snake->size++;
+            *score=*score+1;
+            state[(a_snake->head_X)][(a_snake->head_Y)]=' ';
+        }
 }
 
 int game_over(snake *a_snake, snake_pos *pos1){
