@@ -24,9 +24,9 @@ Game Instructions
 
 Keys: 
 - W: Move the snake up
-- A: Move the snake down
-- S: Move the snake left
-- D: Move the snake right. 
+- A: Move the snake left
+- S: Move the snake down
+- D: Move the snake right 
 
 * Eat the food and don't touch any other snake.
 

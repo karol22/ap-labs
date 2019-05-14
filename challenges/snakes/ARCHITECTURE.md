@@ -21,7 +21,7 @@ We decided this type of architecture for the following reasons:
 - Reuse of the components.
 - Recommended for teams of developers that need control over the behavior of the system.
 
-Our MVC abstraction is made up by three parts and can be graphically represented as follows:
+Our solution was developed in C as programming language; our MVC abstraction is made up by three parts and can be graphically represented as follows:
 
 ![mvc](mvc.png)
 
